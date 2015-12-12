@@ -92,7 +92,7 @@ module Instagram
     def user_followed_by(*args)
       options = args.last.is_a?(Hash) ? args.pop : {}
       id = args.first || "self"
-      response = get("users/#{id}/followed-by", options)
+      response = get("users/#{id}/followed-by", options, raw = true)
       response
     end
 
